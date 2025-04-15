@@ -38,4 +38,54 @@ export default function (plop) {
 
         ]  
     });
+
+    plop.setGenerator('pages', {
+        description: 'Generate React pages with dynamic routing',
+        prompts: [
+            {
+                type: 'input',
+                name: 'name',
+                message: 'Enter the page name (e.g. Home, About, Contact)',
+            },
+            {
+                type: 'input',
+                name: 'route',
+                message: 'Enter the route path (e.g. /home, /about, /contact)',
+            },
+        ],
+        actions: [
+            {
+                type: 'add',
+                path: 'src/pages/{{pascalCase name}}.tsx',
+                templateFile: 'templates/pages/pages.hbs',
+            },
+            {
+                type: 'append',
+                path: 'src/App.tsx',
+                pattern: /(\/\* PLOP_INJECT_IMPORT \*\/)/g,
+                template: `import {{pascalCase name}} from './pages/{{pascalCase name}}'`,
+            },
+            {
+                type: 'append',
+                path: 'src/App.tsx',
+               pattern: /(\{\/\* PLOP_INJECT_ROUTE \*\/\})/g,
+                template: `    <Route path="{{route}}" element={<{{pascalCase name}} />} />`,
+            },
+            {
+                type: 'add',
+                path: 'src/pages/NotFound.tsx',
+                templateFile: 'templates/pages/notFound.hbs',
+                skipIfExists: true,
+            },
+            {
+                type: 'append',
+                path: 'src/App.tsx',
+                pattern: /(\/\* \.\.\.other routes \*\/)/,
+                template: `
+                    <Route path="*" element={<NotFound />} />
+                `,
+            }
+        ],
+    });
 };
+

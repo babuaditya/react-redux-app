@@ -1,8 +1,13 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+ /* PLOP_INJECT_IMPORT */
+const App=()=>{
+  return(
+    <BrowserRouter>
+    <Routes>
+    {/* PLOP_INJECT_ROUTE */}
+    </Routes>
+    </BrowserRouter>
+  );
 
-const App = () => {
-  return (
-    <div className="bg-red-200">App</div>
-  )
 }
-
 export default App
