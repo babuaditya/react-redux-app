@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "plop":"plop"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
@@ -38,6 +39,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/browser": "^3.1.1",
     "@vitest/coverage-v8": "^3.1.1",
+    "change-case": "^5.4.4",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
