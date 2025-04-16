@@ -10,10 +10,11 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "plop":"plop"
+    "plop": "plop"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
+    "clsx": "^2.1.1",
     "husky": "^9.1.7",
     "plop": "^4.0.1",
     "prettier": "^3.5.3",
