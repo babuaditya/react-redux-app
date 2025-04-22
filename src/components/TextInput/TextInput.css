@@ -1,0 +1,10 @@
+@reference "../../index.css";
+.text-input{
+@apply flex flex-col gap-2 py-2 ;
+}
+.text-input__label{
+    @apply text-primary-text capitalize px-1;
+}
+.text-input__input{
+    @apply bg-primary-light px-2 py-2 rounded-lg text-primary-text outline-none ;
+}

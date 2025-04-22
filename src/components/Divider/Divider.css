@@ -1,0 +1,4 @@
+@reference "../../index.css";
+.divider{
+   @apply w-full py-0.5 mt-8 rounded-2xl bg-primary-light overflow-hidden
+}
