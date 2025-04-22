@@ -2,7 +2,11 @@ import React from 'react'
 
 import clsx from 'clsx'
 import './TextInput.css'
-export const TextInput = ({label,className,type='text',...props}:{label:string,className?:string,type:'text'|'password'|'email'|'phone'} )=> {
+type InputProps={
+  label:string,
+  className?:string,type:'text'|'password'|'email'|'phone'}
+  & React.InputHTMLAttributes<HTMLInputElement>;
+export const TextInput = ({label,className,type='text',...props}:InputProps )=> {
   return (
     <div className='text-input'>
     <span className='text-input__label'>{label}</span>
