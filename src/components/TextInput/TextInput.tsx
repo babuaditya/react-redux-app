@@ -10,7 +10,7 @@ export const TextInput = ({label,className,type='text',...props}:InputProps )=> 
   return (
     <div className='text-input'>
     <span className='text-input__label'>{label}</span>
-    <input className={clsx('text-input__input',{className:className})} type='type' {...props}/>
+    <input className={clsx('text-input__input',{className:className})} type={type} {...props}/>
     </div>
   )
 }

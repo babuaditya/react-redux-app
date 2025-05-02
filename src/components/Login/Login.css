@@ -1,6 +1,6 @@
 @reference "../../index.css";
 .login{
-    @apply grid place-items-center h-[100dvh] w-[100vw] bg-gray-200;
+    @apply grid place-items-center h-[100dvh] w-[100vw] bg-primary-background
 }
 .login-form{
 @apply mx-0 w-[435px] shadow-2xl bg-primary h-fit rounded-2xl px-6 py-4;

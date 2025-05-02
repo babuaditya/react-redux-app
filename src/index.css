@@ -5,10 +5,11 @@
 }
 
 @theme{
-    --color-primary:#3A59D1;
-    --color-primary-light:#3D90D7;
+    --color-primary:#3F52A0;
+    --color-primary-light:#5263aa;
     --color-accent-color:#FFD63A;
-    --color-primary-text:#B5FCCD;
-    --color-secondary-text:#FFA955;
+    --color-primary-text:#d9dcec;
+    --color-secondary-text:#131930;
+    --color-primary-background:#131930;
 }
 

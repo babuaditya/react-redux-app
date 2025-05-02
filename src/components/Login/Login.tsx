@@ -8,11 +8,14 @@ export const Login = () => {
   return (
     <div className='login'>
       <div className='login-form'>
+      <div className='w-full my-4 text-center'>
+        <span className=' text-center w-full font-bold text-2xl text-primary-text  '>Login Form </span>
+      </div>
         <TextInput label='email' type='email' placeholder="user@example.com" />
         <TextInput label='password' type='password' placeholder="password" />
       <div className='relative'>
         <Divider/>
-        <div className='absolute top-[-10px] left-[32%] font-normal  px-1 bg-primary text-primary-text'>
+        <div className='absolute top-[50%] left-[50%] transform-[translate(-50%,-50%)] font-normal  px-1 bg-primary text-primary-text'>
         OR Continue With 
         </div>
       </div>
